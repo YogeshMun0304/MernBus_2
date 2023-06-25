@@ -77,9 +77,9 @@ router.post("/book-seat", authMiddleware, async (req, res) => {
 // });
 
 // get bookings by user id
-router.get("/get-bookings-by-user-id", authMiddleware, async (req, res) => {
+router.post("/get-bookings-by-user-id", authMiddleware, async (req, res) => {
   try {
-    const bookings = await Booking.find({})
+    const bookings = await Booking.find({ user: req.body.userId })
       .populate("bus")
       .populate("user");
     res.status(200).send({

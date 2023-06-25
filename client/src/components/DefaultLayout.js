@@ -87,7 +87,14 @@ function DefaultLayout({ children }) {
                       if (item.path === "/logout") {
                         localStorage.removeItem("token");
                         navigate("/login");
-                      } else {
+                      }
+                       else if(item.path === "/bookings"){
+                        window.location.href = '/bookings';
+                        
+                        
+                        
+                       }
+                      else{
                         navigate(item.path);
                       }
                     }}

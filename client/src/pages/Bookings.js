@@ -19,7 +19,7 @@ function Bookings() {
     const getBookings = async () => {
         try {
           dispatch(ShowLoading());
-          const response = await axiosInstance.get("/api/bookings/get-bookings-by-user-id", {});
+          const response = await axiosInstance.post("/api/bookings/get-bookings-by-user-id", {});
           console.log(response.data);
           dispatch(HideLoading());
           if (response.data.success) {console.log(response.data.data)
@@ -84,6 +84,7 @@ function Bookings() {
 
     useEffect(() => {
         getBookings();
+        
       }, []);
       const componentRef = useRef();
       const handlePrint = useReactToPrint({

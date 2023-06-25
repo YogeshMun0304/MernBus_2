@@ -33,9 +33,10 @@ function BusForm({
       } else {
         message.error(response.data.message);
       }
-      getData();
+      
       setShowBusForm(false);
       setSelectedBus(null);
+      getData();
 
       dispatch(HideLoading());
     } catch (error) {
