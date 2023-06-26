@@ -1,13 +1,62 @@
-# BusBooking
+# MERN_BUS_BOOKING
 
-A bus ticket booking app is a mobile application that allows users to book bus tickets online. It is a convenient way for travelers to book their bus tickets without having to go to a physical ticket counter.
 
-Bus ticket booking apps typically offer a range of features, including the ability to search for bus routes, view available seats, and choose the preferred seat location. They also allow users to select their boarding and drop-off points, and pay for their tickets using a variety of payment methods, including credit cards, debit cards, and e-wallets.
 
-Some bus ticket booking apps also offer additional features, such as real-time bus tracking, cancellation and rescheduling options, and customer support services.
 
-One of the biggest advantages of using a bus ticket booking app is the convenience it provides. Users can easily book their tickets from the comfort of their own homes or while on-the-go, without having to queue up at ticket counters.
 
-Another advantage of using a bus ticket booking app is that it allows users to compare prices and schedules from multiple bus operators, helping them to find the best deals and most convenient options.
+## Prerequisites
 
-Overall, a bus ticket booking app can be a useful tool for travelers who frequently use buses for transportation. It provides a hassle-free and convenient way to book tickets, saving time and effort.
+Before running the server, make sure you have the following software installed:
+
+- [Node.js](https://nodejs.org) (version X.X.X or higher)
+- [npm](https://www.npmjs.com/) (usually comes bundled with Node.js)
+
+## Getting Started
+
+To get started with the project, follow the steps below:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/YogeshMun0304/MernBus_2.git
+   ```
+
+2. Change into the project's directory:
+
+   ```bash
+   cd project-name
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Create a new file called `.env` in the project's root directory.
+
+5. Open the `.env` file and add the following line, replacing `YOUR_MONGO_URL` with your own MongoDB connection URL:
+
+   ```
+   MONGO_URL=YOUR_MONGO_URL
+   ```
+
+   Save the file after making the changes.
+
+## Running the Server
+
+To start the server, run the following command:
+
+```bash
+nodemon server.js
+```
+
+This will start the server and make it accessible at `http://localhost:3001`. You should see a message in the console indicating that the server is running.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvement, please feel free to create a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
