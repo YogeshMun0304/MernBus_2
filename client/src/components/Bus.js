@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function Bus({ bus }) {
+function Bus({ bus  }) {
   const navigate = useNavigate();
   return (
-    <div className="card">
+    <div className="card" key = {bus._id}>
       <h1 className="text-lg primary-text">{bus.name}</h1>
       <hr />
       <div className="d-flex justify-content-between">

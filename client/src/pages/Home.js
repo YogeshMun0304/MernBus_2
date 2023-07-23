@@ -28,7 +28,7 @@ function Home() {
       dispatch(ShowLoading());
       const response = await axiosInstance.get("/api/buses/get-all-buses");
       dispatch(HideLoading());
-      if (response.data.success) {console.log(response.data.data)
+      if (response.data.success) {
         setBuses(response.data.data);
       } else {
         message.error(response.data.message);
@@ -88,18 +88,17 @@ function Home() {
             }>Search</button>
             {/* <button className='secondary-btn' onClick={()=>window.location.reload()
             }>Clear</button> */}
-            <button className='secondary-btn' onClick={()=>setFilters({
-              from: "", to: "", journeyDate:"",
-            })}>Clear</button> 
-            </div>
+            <button className='secondary-btn' onClick={()=>window.location.reload()}>Clear</button> 
+            </div> 
           </Col>
         </Row>
       </div>
       <div>
         <Row gutter={[15,15]}>
            {buses.filter((bus)=>bus.status==='Yet To Start').map((bus)=>(
+            
             <Col lg={12} xs={24} sm={24}>
-              <Bus bus={bus}/>
+              <Bus  bus={bus}/>
             </Col>
            ))}
           
